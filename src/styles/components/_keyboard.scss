@@ -1,0 +1,54 @@
+
+
+.keyboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+
+    &_whiteKey,
+    &_blackKey {
+        position: relative;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0.5rem 0;
+        user-select: none;
+        cursor: pointer;
+    }   
+
+    &_whiteKey {
+        width: 3.5rem;
+        height: 12.5rem;
+        color: rgb(119, 118, 118);
+        z-index: 1;
+        border-left: 1px solid rgb(186, 186, 186);
+        border-bottom: 1px solid rgb(186, 186, 186);
+        border-radius: 0 0 5px 5px;
+        box-shadow: -1px 0 0 white inset, 0 0 5px hsl(0, 0%, 80%) inset, 0 0 3px rgb(170, 170, 170);
+
+        &:active {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+    }
+
+    &_blackKey {
+        height: 8rem;
+        width: 2rem;
+        color: white;
+        margin: 0 -1rem 0 -1rem;
+        z-index: 2;
+        border: 1px solid black;
+        border-radius: 0 0 5px 5px;
+        box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.9), 3px 3px 5px rgba(0, 0, 0, 0.7);
+        background:rgb(24, 24, 24);
+
+        &:active {
+            box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.9), 3px 1px 0px rgba(0, 0, 0, 0.1);
+        }
+
+    }
+
+   
+}
